@@ -35,7 +35,7 @@ class Game:
         pass
     
     def draw(self):
-        pass
+        self.map.draw()
         
     def run(self):
         try :
@@ -43,7 +43,7 @@ class Game:
                 self.check_events()
                 self.update()
                 self.draw()
-        except SystemError:
+        except SystemExit:
             pg.quit()
             sys.exit()
 
