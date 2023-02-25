@@ -27,8 +27,10 @@ class Game:
             if event.type == pg.QUIT or (event.type == pg.KEYDOWN and event.key == pg.K_ESCAPE):
                 pg.quit()
                 sys.exit()
-            # elif event.type == self.global_event:
-            #     self.global_trigger = True
+            elif event.type == pg.KEYDOWN and event.key == pg.K_SPACE:
+                self.map.generate()
+            elif event.type == self.global_event:
+                self.global_trigger = True
             # self.player.single_fire_event(event)
     
     def update(self):
@@ -36,6 +38,8 @@ class Game:
     
     def draw(self):
         self.map.draw()
+        
+        pg.display.flip()
         
     def run(self):
         try :
