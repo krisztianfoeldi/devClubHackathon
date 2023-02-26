@@ -3,7 +3,6 @@ import sys
 from pygame.locals import *
 
 import maze
-import tile
 import enemy
 import player
 
@@ -45,13 +44,11 @@ class Game:
                 elif event.key == pg.K_RIGHT:
                     self.characterPlayer.move(RIGHT)
                 elif event.key == pg.K_DOWN:
-                    
                     self.characterPlayer.move(DOWN)
                 elif event.key == pg.K_LEFT:
                     self.characterPlayer.move(LEFT)
             elif event.type == self.global_event:
                 self.global_trigger = True
-            # self.player.single_fire_event(event)
     
     def update(self):
         pg.display.update()
