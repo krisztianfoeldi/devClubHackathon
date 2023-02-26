@@ -1,4 +1,4 @@
-PLAYER_IMAGE = 'Images/player_image.png'
+PLAYER_IMAGE = 'Player/GoUpDown.png'
 ICON = 'Images/elephant_gameIcon.png'
 
 WHITE = (255, 255, 255)
@@ -9,3 +9,8 @@ DIMENSION = (32, 18)
 RES = (DIMENSION[0] * TILE_SIDE, DIMENSION[1] * TILE_SIDE)
 
 FOV_RADIUS = 20
+
+UP = 0
+RIGHT = 1
+DOWN = 2
+LEFT = 3

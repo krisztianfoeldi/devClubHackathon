@@ -44,15 +44,15 @@ class Tile:
     def draw(self): 
         xcoord = self.x * TILE_SIDE
         ycoord = self.y * TILE_SIDE
-        pg.draw.rect(self.game.screen, WHITE, (xcoord, 
+        pg.draw.rect(self.game.screen, BLACK, (xcoord, 
                         ycoord, TILE_SIDE, TILE_SIDE))
         if self.walls[0]:
-            pg.draw.line(self.game.screen, BLACK, (xcoord, ycoord), (xcoord + TILE_SIDE, ycoord))
+            pg.draw.line(self.game.screen, WHITE, (xcoord, ycoord), (xcoord + TILE_SIDE, ycoord))
         if self.walls[1]:
-            pg.draw.line(self.game.screen, BLACK, (xcoord + TILE_SIDE, ycoord), (xcoord + TILE_SIDE, ycoord + TILE_SIDE))
+            pg.draw.line(self.game.screen, WHITE, (xcoord + TILE_SIDE, ycoord), (xcoord + TILE_SIDE, ycoord + TILE_SIDE))
         if self.walls[2]:
-            pg.draw.line(self.game.screen, BLACK, (xcoord, ycoord + TILE_SIDE), (xcoord + TILE_SIDE, ycoord + TILE_SIDE))
+            pg.draw.line(self.game.screen, WHITE, (xcoord, ycoord + TILE_SIDE), (xcoord + TILE_SIDE, ycoord + TILE_SIDE))
         if self.walls[3]:
-            pg.draw.line(self.game.screen, BLACK, (xcoord, ycoord), (xcoord, ycoord + TILE_SIDE))
+            pg.draw.line(self.game.screen, WHITE, (xcoord, ycoord), (xcoord, ycoord + TILE_SIDE))
         
         

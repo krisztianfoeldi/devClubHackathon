@@ -39,13 +39,13 @@ class Maze:
         x = cur_cell.x - next_cell.x
         y = cur_cell.y - next_cell.y
         if x == -1:
-            cur_cell.walls[1] = next_cell.walls[3] = False
+            cur_cell.walls[RIGHT] = next_cell.walls[LEFT] = False
         elif x == 1: 
-            cur_cell.walls[3] = next_cell.walls[1] = False
+            cur_cell.walls[LEFT] = next_cell.walls[RIGHT] = False
         elif y == -1: 
-            cur_cell.walls[2] = next_cell.walls[0] = False
+            cur_cell.walls[DOWN] = next_cell.walls[UP] = False
         elif y == 1: 
-            cur_cell.walls[0] = next_cell.walls[2] = False            
+            cur_cell.walls[UP] = next_cell.walls[DOWN] = False            
     
     def draw(self):
         for row in self.grid:

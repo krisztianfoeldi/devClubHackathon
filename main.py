@@ -35,8 +35,18 @@ class Game:
             if event.type == pg.QUIT or (event.type == pg.KEYDOWN and event.key == pg.K_ESCAPE):
                 pg.quit()
                 sys.exit()
-            elif event.type == pg.KEYDOWN and event.key == pg.K_SPACE:
-                self.map.generate()
+            elif event.type == pg.KEYDOWN:
+                if event.key == pg.K_SPACE:
+                    self.map.generate()
+                elif event.key == pg.K_UP:
+                    self.characterPlayer.move(UP)
+                elif event.key == pg.K_RIGHT:
+                    self.characterPlayer.move(RIGHT)
+                elif event.key == pg.K_DOWN:
+                    
+                    self.characterPlayer.move(DOWN)
+                elif event.key == pg.K_LEFT:
+                    self.characterPlayer.move(LEFT)
             elif event.type == self.global_event:
                 self.global_trigger = True
             # self.player.single_fire_event(event)
