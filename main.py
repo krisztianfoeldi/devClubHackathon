@@ -4,6 +4,7 @@ from pygame.locals import *
 
 import maze
 import tile
+import enemy
 
 from constants import *
 
@@ -20,6 +21,7 @@ class Game:
         
     def new_game(self):
         self.map = maze.Maze(self)
+        self.characterEnemy = enemy.Enemy(self)
      
     def check_events(self):
         self.global_trigger = False
@@ -32,10 +34,11 @@ class Game:
             # self.player.single_fire_event(event)
     
     def update(self):
-        pass
+        pg.display.update()
     
     def draw(self):
         self.map.draw()
+        self.characterEnemy.draw()
         
     def run(self):
         try :
