@@ -4,6 +4,7 @@ from pygame.locals import *
 
 import maze
 import tile
+import player
 
 from constants import *
 
@@ -16,10 +17,17 @@ class Game:
         self.global_trigger = False
         self.global_event = pg.USEREVENT
         pg.time.set_timer(self.global_event, 40)
+
+        #game title and icon
+        pg.display.set_caption("aMazing")
+        gameIcon = pg.image.load('Images\elephant_gameIcon.png')
+        pg.display.set_icon(gameIcon)
+
         self.new_game()
         
     def new_game(self):
         self.map = maze.Maze(self)
+        self.characterPlayer = player.Player(self)
      
     def check_events(self):
         self.global_trigger = False
@@ -32,11 +40,12 @@ class Game:
             # self.player.single_fire_event(event)
     
     def update(self):
-        pass
+        pg.display.update()
     
     def draw(self):
         self.map.draw()
-        
+        self.characterPlayer.draw()
+
     def run(self):
         try :
             while True:
