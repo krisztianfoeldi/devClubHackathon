@@ -5,7 +5,7 @@ from constants import *
 
 class Enemy():
     def __init__(self,game):
-        self.enemyImage = pg.image.load('pygame.JPEG')
+        self.enemyImage = pg.image.load(ENEMY)
         self.enemyX = 50
         self.enemyY = 200
         self.game = game
