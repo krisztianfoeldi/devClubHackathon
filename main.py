@@ -47,6 +47,16 @@ class Game:
                     self.characterPlayer.move(DOWN)
                 elif event.key == pg.K_LEFT:
                     self.characterPlayer.move(LEFT)
+
+                elif event.key == pg.K_w:
+                    self.characterEnemy.enemyMove(UP)
+                elif event.key == pg.K_d:
+                    self.characterEnemy.enemyMove(RIGHT)
+                elif event.key == pg.K_s:
+                    self.characterEnemy.enemyMove(DOWN)
+                elif event.key == pg.K_a:
+                    self.characterEnemy.enemyMove(LEFT)
+
             elif event.type == self.global_event:
                 self.global_trigger = True
     
