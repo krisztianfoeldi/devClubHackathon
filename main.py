@@ -21,7 +21,7 @@ class Game:
 
         #game title and icon
         pg.display.set_caption("aMazing")
-        gameIcon = pg.image.load('Images\elephant_gameIcon.png')
+        gameIcon = pg.image.load(ICON)
         pg.display.set_icon(gameIcon)
 
         self.new_game()
