@@ -1,5 +1,5 @@
-PLAYER_IMAGE = 'Player/GoUpDown.png'
-ENEMY = "Enemy/MikeyIdle.png"
+PLAYER_IMAGE = 'Images/GoUpDown.png'
+ENEMY = "Images/MikeyIdle.png"
 ICON = 'Images/elephant_gameIcon.png'
 
 WHITE = (255, 255, 255)
